@@ -35,5 +35,5 @@ HTML5 + CSS3 + JavaScript vanilla. Sin frameworks, sin build, sin backend.
 
 ## Notas
 
-- Precios reales en la landing: Basico $10 USD · Personalizado $15 USD · Plan Anual $22.50 USD.
+- Precios reales en la landing: Basico $40.000 COP · Personalizado $60.000 COP · Plan Anual $90.000 COP.
 - Sin testimonios ficticios. La prueba social se agrega cuando existan casos reales.
