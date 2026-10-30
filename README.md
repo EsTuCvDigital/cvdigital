@@ -26,7 +26,7 @@ HTML5 + CSS3 + JavaScript vanilla. Sin frameworks, sin build, sin backend.
 
 - Hojas de vida: entrega manual por WhatsApp (link + codigo QR).
 - Hosting: **GitHub Pages** (rama `main`, raiz `/`).
-- Sitio: `https://jacob958438.github.io/cvdigital/`
+- Sitio: `https://estucvdigital.github.io/cvdigital/`
 
 ## Contacto
 
