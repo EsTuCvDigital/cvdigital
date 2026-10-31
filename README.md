@@ -13,6 +13,10 @@ templates/
   corporativa.html             Administracion, finanzas, derecho
   minimalista.html             Uso general
   tech.html                    Programadores, DevOps, IT
+juan-esteban-rojas/            Hoja de vida publicada (landing moderna)
+  index.html                   Pagina web responsive
+  cv-print.html                Fuente A4 para generar el PDF
+  CV-Juan-Esteban-Rojas.pdf    PDF de una pagina con QR
 assets/
   profile.png                  Imagen de perfil de la marca (1080x1080)
   profile-512.png              Version ligera para favicon / icono
@@ -27,6 +31,14 @@ HTML5 + CSS3 + JavaScript vanilla. Sin frameworks, sin build, sin backend.
 - Hojas de vida: entrega manual por WhatsApp (link + codigo QR).
 - Hosting: **GitHub Pages** (rama `main`, raiz `/`).
 - Sitio: `https://estucvdigital.github.io/cvdigital/`
+
+## Hojas de vida publicadas
+
+| Persona | Página | PDF |
+|---|---|---|
+| Juan Esteban Rojas Arbeláez | https://estucvdigital.github.io/cvdigital/juan-esteban-rojas/ | `juan-esteban-rojas/CV-Juan-Esteban-Rojas.pdf` |
+
+El PDF se regenera desde `juan-esteban-rojas/cv-print.html` (A4, una página, QR a la versión web).
 
 ## Contacto
 
