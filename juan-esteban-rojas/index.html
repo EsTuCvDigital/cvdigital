@@ -240,7 +240,7 @@
 
     .nav-link span {
       font-size: 0.56rem;
-      color: #5f594f;
+      color: #8f887b;
       letter-spacing: 0.05em;
     }
 
@@ -438,13 +438,13 @@
       box-shadow: 0 10px 26px rgba(22, 22, 22, 0.07);
     }
 
-    .value-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.9rem;
-      font-weight: 800;
-      line-height: 1;
-      color: #ece5d7;
-      margin-bottom: 0.9rem;
+    .value-card::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: var(--coral);
+      margin-bottom: 1.1rem;
     }
 
     .value-title {
@@ -1005,17 +1005,14 @@
 
         <div class="value-grid">
           <article class="value-card">
-            <div class="value-num" aria-hidden="true">01</div>
             <h3 class="value-title">Puntualidad que sostiene el turno</h3>
             <p class="value-desc">Llego a tiempo y cumplo el horario acordado, incluso en fines de semana y festivos.</p>
           </article>
           <article class="value-card">
-            <div class="value-num" aria-hidden="true">02</div>
             <h3 class="value-title">Aprendo rápido lo que la cocina necesita</h3>
             <p class="value-desc">Me adapto a nuevas tareas y ritmos con disposición constante para aprender.</p>
           </article>
           <article class="value-card">
-            <div class="value-num" aria-hidden="true">03</div>
             <h3 class="value-title">Orden y disciplina con los equipos</h3>
             <p class="value-desc">Manejo responsable de equipos, con cuidado y método en cada uso.</p>
           </article>
