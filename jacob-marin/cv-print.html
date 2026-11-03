@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV impresión — Jacob Marin Cataño</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --dark: #161616;
+    --coral: #ff5c3a;
+    --yellow: #ffe144;
+    --blue: #2d4eff;
+    --muted: #6f675a;
+    --border: #ded7c9;
+    --soft: #f5f0e8;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  body {
+    position: relative;
+    background: #fff;
+    color: var(--dark);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 8.8pt;
+    font-weight: 300;
+    line-height: 1.42;
+    padding: 9mm 15mm 31mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* HEADER */
+  .header {
+    display: table;
+    width: 100%;
+    padding-bottom: 2.8mm;
+    border-bottom: 0.6mm solid var(--dark);
+  }
+
+  .monogram-cell {
+    display: table-cell;
+    width: 25mm;
+    vertical-align: middle;
+  }
+
+  .header-main {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5mm;
+  }
+
+  .header-rule {
+    width: 34mm;
+    height: 0.6mm;
+    background: var(--coral);
+    margin-top: -0.6mm;
+  }
+
+  .monogram {
+    width: 20mm;
+    height: 20mm;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    border: 1mm solid var(--coral);
+    color: var(--yellow);
+    font-family: 'Syne', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .kicker {
+    font-family: 'Syne', sans-serif;
+    font-size: 6.2pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c0391f;
+    margin-bottom: 1.2mm;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 19pt;
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.1mm;
+  }
+
+  .role {
+    font-family: 'Syne', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.7mm;
+  }
+
+  .contact {
+    display: block;
+    font-size: 7.4pt;
+    line-height: 1.5;
+    color: var(--dark);
+  }
+
+  .contact .sep { color: var(--coral); padding: 0 1.2mm; }
+
+  /* SECTIONS */
+  section { margin-top: 3.6mm; }
+
+  h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 6.4pt;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 3.5mm;
+    margin-bottom: 1.9mm;
+  }
+
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 0.2mm;
+    background: var(--border);
+  }
+
+  .profile { font-size: 8.9pt; line-height: 1.5; color: #2c2924; }
+  .profile + .profile { margin-top: 1.1mm; }
+  .profile strong { font-weight: 500; }
+
+  /* FORTALEZAS */
+  .strengths-line {
+    font-size: 7.5pt;
+    line-height: 1.5;
+    color: #3f3b35;
+  }
+
+  .strengths-line strong { font-weight: 500; color: var(--dark); }
+
+  /* EXPERIENCIA */
+  .job { margin-top: 2.8mm; }
+  .job:first-of-type { margin-top: 0; }
+
+  .job-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 9.2pt;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .job-role {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 6.6pt;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-left: 1.5mm;
+  }
+
+  .job-date {
+    font-size: 6.5pt;
+    color: var(--muted);
+    margin: 0.5mm 0 1mm;
+  }
+
+  .job-desc {
+    font-size: 7.6pt;
+    line-height: 1.4;
+    color: #55514a;
+    margin-bottom: 0.8mm;
+  }
+
+  .job-list {
+    list-style: square;
+    padding-left: 4mm;
+    margin-bottom: 0.8mm;
+  }
+
+  .job-list li {
+    padding-left: 0;
+    font-size: 7.3pt;
+    line-height: 1.36;
+    color: #3f3b35;
+    margin-top: 0.35mm;
+  }
+
+  .job-list li::marker { color: var(--coral); }
+
+  .tools {
+    font-size: 6.4pt;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+
+  /* EDUCACION */
+  .edu-item {
+    border-left: 0.7mm solid var(--blue);
+    padding-left: 3mm;
+    margin-top: 2.4mm;
+  }
+
+  .edu-item:first-of-type { margin-top: 0; }
+
+  .edu-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 8.4pt;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .edu-inst { font-size: 7.2pt; color: var(--muted); margin-top: 0.3mm; }
+
+  .edu-line {
+    font-size: 6.6pt;
+    color: var(--muted);
+    margin-top: 0.3mm;
+  }
+
+  .edu-badge {
+    display: inline-block;
+    margin-top: 0.8mm;
+    font-family: 'Syne', sans-serif;
+    font-size: 5.9pt;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    background: var(--yellow);
+    padding: 0.55mm 1.7mm;
+  }
+
+  /* HABILIDADES */
+  .skill-line {
+    font-size: 7.5pt;
+    line-height: 1.45;
+    color: #3f3b35;
+    margin-top: 0.6mm;
+  }
+
+  .skill-line:first-of-type { margin-top: 0; }
+
+  .skill-line strong {
+    font-family: 'Syne', sans-serif;
+    font-size: 6.6pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-right: 1.2mm;
+  }
+
+  /* DISPONIBILIDAD */
+  .availability {
+    margin-top: 2.9mm;
+    background: var(--yellow);
+    padding: 2.4mm 3.6mm;
+  }
+
+  .availability strong {
+    font-family: 'Syne', sans-serif;
+    font-size: 7.8pt;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    display: block;
+    margin-bottom: 0.4mm;
+  }
+
+  .availability span { font-size: 7pt; line-height: 1.4; }
+
+  .availability .tags {
+    display: block;
+    margin-top: 0.8mm;
+    font-size: 6.2pt;
+    color: #3f3b35;
+  }
+
+  .availability .tags span { white-space: nowrap; }
+  .availability .tags .sep { padding: 0 1mm; color: rgba(22,22,22,0.45); }
+
+  /* IDIOMAS + REFERENCIAS */
+  .lang-line {
+    font-size: 7.6pt;
+    line-height: 1.5;
+    color: #3f3b35;
+  }
+
+  .lang-line strong { font-family: 'Syne', sans-serif; font-size: 7.2pt; font-weight: 700; }
+  .lang-line .level { color: var(--muted); }
+
+  .ref-line {
+    font-size: 7.6pt;
+    line-height: 1.45;
+    color: #3f3b35;
+  }
+
+  .ref-line strong { font-family: 'Syne', sans-serif; font-size: 7.4pt; font-weight: 700; }
+
+  /* FOOTER + QR */
+  .footer {
+    position: absolute;
+    left: 15mm;
+    right: 15mm;
+    bottom: 8mm;
+    padding-top: 3mm;
+    border-top: 0.25mm solid var(--border);
+  }
+
+  .qr-block {
+    display: inline-block;
+    vertical-align: bottom;
+    border: 0.25mm solid var(--border);
+    padding: 1.5mm;
+    background: #fff;
+  }
+
+  .qr-block img { width: 19mm; height: 19mm; display: block; }
+
+  .qr-caption {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 2.8mm;
+    margin-bottom: 0.8mm;
+    max-width: 62mm;
+    font-size: 6.6pt;
+    line-height: 1.4;
+    color: var(--dark);
+  }
+
+  .qr-caption strong {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 7.2pt;
+    font-weight: 700;
+    margin-bottom: 0.6mm;
+  }
+
+  .qr-caption span { color: var(--muted); font-size: 5.9pt; overflow-wrap: anywhere; }
+
+  .footer-right {
+    float: right;
+    text-align: right;
+    font-size: 6.4pt;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-top: 3mm;
+  }
+
+  .footer-right strong {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 6.9pt;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     Ajuste compacto: una página A4 y lectura ATS en orden natural
+     ============================================================ */
+  body { padding: 7.5mm 14mm 28mm; font-size: 8.2pt; line-height: 1.38; }
+  .monogram { font-size: 11.5pt; }
+  .kicker { font-size: 5.8pt; margin-bottom: 1mm; }
+  h1 { font-size: 17pt; margin-bottom: 0.9mm; }
+  .role { font-size: 7.2pt; margin-bottom: 1.3mm; }
+  .contact { font-size: 6.9pt; line-height: 1.4; }
+  section { margin-top: 2.2mm; }
+  h2 { font-size: 6pt; margin-bottom: 1.4mm; }
+  .profile { font-size: 8.1pt; line-height: 1.38; }
+  .profile + .profile { margin-top: 0.6mm; }
+  .strengths-line { font-size: 6.9pt; line-height: 1.35; }
+  .job { margin-top: 1.8mm; }
+  .job-title { font-size: 8.5pt; }
+  .job-role { font-size: 6.1pt; }
+  .job-date { font-size: 6pt; margin: 0.3mm 0 0.7mm; }
+  .job-desc { font-size: 7pt; line-height: 1.32; margin-bottom: 0.6mm; }
+  .job-list { margin-bottom: 0.6mm; }
+  .job-list li { font-size: 6.8pt; line-height: 1.28; margin-top: 0.25mm; }
+  .tools { font-size: 5.9pt; }
+  .edu-item { margin-top: 1.6mm; }
+  .edu-title { font-size: 7.9pt; }
+  .edu-inst { font-size: 6.7pt; }
+  .edu-line { font-size: 6.1pt; }
+  .edu-badge { font-size: 5.5pt; margin-top: 0.6mm; padding: 0.45mm 1.4mm; }
+  .skill-line { font-size: 7pt; line-height: 1.35; margin-top: 0.4mm; }
+  .skill-line strong { font-size: 6.2pt; }
+  .availability { margin-top: 2mm; padding: 1.8mm 3mm; }
+  .availability strong { font-size: 7.2pt; }
+  .availability span { font-size: 6.4pt; }
+  .availability .tags { font-size: 5.8pt; margin-top: 0.5mm; }
+  .lang-line { font-size: 7pt; line-height: 1.35; }
+  .lang-line strong { font-size: 6.8pt; }
+  .ref-line { font-size: 7pt; line-height: 1.35; }
+  .footer { bottom: 6.5mm; padding-top: 2.2mm; }
+  .qr-block { padding: 1.1mm; }
+  .qr-block img { width: 17mm; height: 17mm; }
+  .qr-caption { margin-left: 2.4mm; margin-bottom: 0.5mm; font-size: 6pt; }
+  .qr-caption strong { font-size: 6.7pt; }
+  .qr-caption span { font-size: 5.5pt; }
+  .footer-right { font-size: 5.9pt; margin-top: 2.4mm; }
+  .footer-right strong { font-size: 6.4pt; }
+</style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="monogram-cell">
+      <div class="monogram" aria-hidden="true">JM</div>
+    </div>
+    <div class="header-main">
+      <div class="kicker">Hoja de vida · 2026</div>
+      <h1>Jacob Marin Cataño</h1>
+      <div class="role">Auxiliar en Desarrollo de Software</div>
+      <div class="contact">
+        Medellín, Antioquia, Colombia<span class="sep">·</span>+57 311 400 8507<span class="sep">·</span>jacobmarinc.28@gmail.com<span class="sep">·</span>github.com/EsTuCvDigital
+      </div>
+    </div>
+  </header>
+  <div class="header-rule" aria-hidden="true"></div>
+
+  <section>
+    <h2>Perfil profesional</h2>
+    <p class="profile">Egresado de la Universidad Pontificia Bolivariana (UPB) como <strong>Auxiliar en Desarrollo de Software</strong> y estudiante de Desarrollo de Software en el ITM. Trabajo de forma autónoma en la creación de <strong>soluciones digitales</strong>, <strong>automatizaciones</strong> y <strong>entornos de agentes de IA</strong>, con interés en convertir procesos repetitivos en flujos más simples y eficientes.</p>
+    <p class="profile">Me caracterizo por detectar oportunidades de mejora, aprender con proyectos reales y llevar las ideas hasta una versión funcional. Busco un rol remoto en el que pueda aportar desde el desarrollo, la automatización y el uso de inteligencia artificial.</p>
+  </section>
+
+  <section>
+    <h2>Fortalezas</h2>
+    <p class="strengths-line"><strong>Automatización útil:</strong> convierto tareas repetitivas en procesos automáticos que ahorran tiempo y esfuerzo. <strong>Aprendizaje aplicado:</strong> llevo lo que estudio a proyectos funcionales. <strong>Resolución práctica:</strong> analizo el problema y diseño una solución con las herramientas disponibles.</p>
+  </section>
+
+  <section>
+    <h2>Formación académica</h2>
+    <div class="edu-item">
+      <div class="edu-title">Auxiliar en Desarrollo de Software</div>
+      <div class="edu-inst">Universidad Pontificia Bolivariana (UPB) · Medellín</div>
+      <div class="edu-line">01/2024 – 11/2025</div>
+      <span class="edu-badge">Egresado · 2025</span>
+    </div>
+    <div class="edu-item">
+      <div class="edu-title">Tecnólogo en Desarrollo de Software</div>
+      <div class="edu-inst">ITM · Medellín</div>
+      <div class="edu-line">01/2026 – Actualidad</div>
+      <span class="edu-badge">En proceso</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experiencia autónoma y proyectos</h2>
+
+    <article class="job">
+      <div class="job-title">CVDigital <span class="job-role">— Creador y desarrollador principal</span></div>
+      <div class="job-date">03/2026 – Actualidad</div>
+      <p class="job-desc">Servicio que convierte hojas de vida en páginas web profesionales con enlace y QR, con entrega en 48 horas.</p>
+      <ul class="job-list">
+        <li>Diseñé y puse en marcha el servicio: plantillas para distintos perfiles, página de conversión, modelo de tres planes de precio y proceso de venta y entrega por WhatsApp e Instagram.</li>
+        <li>Desarrollé el producto en HTML, CSS y JavaScript puro e integré procesos automatizados de producción de contenido y generación de archivos.</li>
+      </ul>
+      <div class="tools">Herramientas: HTML5 · CSS3 · JavaScript · Python · n8n</div>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Mi entorno de agentes <span class="job-role">— Creador</span></div>
+      <div class="job-date">06/2026 – 07/2026</div>
+      <p class="job-desc">Infraestructura local de agentes de IA especializados, desarrollada durante un mes en jornadas parciales para optimizar el desarrollo de CVDigital.</p>
+      <ul class="job-list">
+        <li>Diseñé e implementé un ecosistema de agentes interconectados, cada uno con funciones y responsabilidades específicas dentro del flujo de desarrollo.</li>
+        <li>Configuré la infraestructura en un equipo local y la adapté a los requerimientos y flujos de trabajo del proyecto para agilizar la ejecución.</li>
+      </ul>
+      <div class="tools">Herramientas: OpenCode · GitHub · Python · JavaScript</div>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Automatización <span class="job-role">— Desarrollador</span></div>
+      <div class="job-date">09/2024 – Actualidad</div>
+      <p class="job-desc">Conjunto de proyectos personales para automatizar tareas repetitivas identificadas en la rutina diaria.</p>
+      <ul class="job-list">
+        <li>Creé un programa que solicita los datos de la semana y genera y envía automáticamente una factura en PDF actualizada.</li>
+        <li>Reduje el tiempo y el esfuerzo dedicados a tareas repetitivas mediante automatizaciones de bajo costo y alta practicidad.</li>
+      </ul>
+      <div class="tools">Herramientas: Python · n8n · Agentes de IA</div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Habilidades</h2>
+    <p class="skill-line"><strong>Técnicas y herramientas</strong> SQL · Python · Creación y uso de agentes de IA · Automatización de procesos.</p>
+    <p class="skill-line"><strong>Blandas</strong> Tolerancia a la presión · Resolución de problemas · Creatividad · Adaptabilidad · Pensamiento crítico · Gestión del tiempo.</p>
+
+    <div class="availability">
+      <strong>Disponibilidad inmediata</strong>
+      <span>Disponibilidad inmediata para trabajo remoto a medio tiempo, con viajes ocasionales y sin reubicación.</span>
+      <div class="tags">
+        <span>Remoto</span><span class="sep">·</span><span>Medio tiempo</span><span class="sep">·</span><span>Viajes ocasionales</span><span class="sep">·</span><span>Sin reubicación</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Idiomas</h2>
+    <p class="lang-line"><strong>Español</strong> <span class="level">— Nativo</span><span class="sep"> · </span><strong>Inglés</strong> <span class="level">— B1</span><span class="sep"> · </span><strong>Francés</strong> <span class="level">— A1</span></p>
+  </section>
+
+  <section>
+    <h2>Intereses</h2>
+    <p class="lang-line">Deportes · Viajes · Educación</p>
+  </section>
+
+  <section>
+    <h2>Referencias</h2>
+    <p class="ref-line"><strong>Referencias profesionales</strong> — disponibles a solicitud.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="qr-block">
+      <img src="assets/qr-jacob-marin.png" alt="Código QR de la hoja de vida digital">
+    </div>
+    <div class="qr-caption">
+      <strong>Escanea para ver mi hoja de vida digital</strong>
+      <span>estucvdigital.github.io/cvdigital/jacob-marin</span>
+    </div>
+    <div class="footer-right">
+      <strong>Hoja de vida digital</strong>
+      Documento actualizado · 2026<br>
+      Página 1 de 1
+    </div>
+  </footer>
+
+</body>
+</html>

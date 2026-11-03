@@ -37,8 +37,19 @@ HTML5 + CSS3 + JavaScript vanilla. Sin frameworks, sin build, sin backend.
 | Persona | Página | PDF |
 |---|---|---|
 | Juan Esteban Rojas Arbeláez | https://estucvdigital.github.io/cvdigital/juan-esteban-rojas/ | `juan-esteban-rojas/CV-Juan-Esteban-Rojas.pdf` |
+| Jacob Marin Cataño | https://estucvdigital.github.io/cvdigital/jacob-marin/ | `jacob-marin/CV-Jacob-Marin.pdf` |
 
-El PDF se regenera desde `juan-esteban-rojas/cv-print.html` (A4, una página, QR a la versión web).
+El PDF se regenera desde el `cv-print.html` de cada carpeta (A4, una página, QR a la versión web).
+
+## Regla de entrega de cada hoja de vida
+
+Toda hoja de vida digital debe entregarse con:
+
+- `index.html` responsive (página web).
+- `cv-print.html` (fuente A4).
+- `CV-<Nombre-Apellido>.pdf` (una página A4, mismo contenido, QR a la web).
+- `assets/pdf-preview.png` y `.webp` + QR.
+- La página debe enlazar el PDF en la sección "Hoja de vida en PDF" y en el pie.
 
 ## Contacto
 
