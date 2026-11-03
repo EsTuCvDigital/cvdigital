@@ -49,6 +49,7 @@ Toda hoja de vida digital debe entregarse con:
 - `cv-print.html` (fuente A4).
 - `CV-<Nombre-Apellido>.pdf` (una página A4, mismo contenido, QR a la web).
 - `assets/pdf-preview.png` y `.webp` + QR.
+- Foto de perfil opcional: `assets/retrato.jpg` (solo si el usuario la entrega).
 - La página debe enlazar el PDF en la sección "Hoja de vida en PDF" y en el pie.
 
 ## Contacto

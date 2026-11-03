@@ -115,21 +115,15 @@
       flex-shrink: 0;
     }
 
-    .avatar-monogram {
+    .avatar-photo {
       width: 88px;
       height: 88px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #211f1a;
+      object-fit: cover;
+      object-position: 50% 30%;
+      background: #fff;
       border: 3px solid var(--coral);
       box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.06);
-      font-family: 'Syne', sans-serif;
-      font-size: 1.45rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      color: var(--yellow);
     }
 
     .status-dot {
@@ -945,8 +939,7 @@
       .layout { grid-template-columns: 300px 1fr; }
       .sidebar { padding: 1.7rem 1.4rem; gap: 1.3rem; }
       .sidebar-top-row { gap: 0.8rem; }
-      .avatar-wrap, .avatar-wrap .avatar-monogram { width: 80px; height: 80px; }
-      .avatar-monogram { font-size: 1.3rem; }
+      .avatar-wrap, .avatar-wrap .avatar-photo { width: 80px; height: 80px; }
       .sidebar-name { font-size: 1.18rem; }
       .hero-strip { padding: 2.3rem 2rem; }
       .content { padding: 2.6rem 2rem 0; }
@@ -997,8 +990,7 @@
 
     @media (max-width: 420px) {
       .sidebar { padding: 1.4rem 1.2rem; }
-      .avatar-wrap, .avatar-wrap .avatar-monogram { width: 76px; height: 76px; }
-      .avatar-monogram { font-size: 1.2rem; }
+      .avatar-wrap, .avatar-wrap .avatar-photo { width: 76px; height: 76px; }
       .sidebar-name { font-size: 1.15rem; }
       .hero-headline { font-size: 1.35rem; }
       .hero-badge { white-space: normal; }
@@ -1040,7 +1032,7 @@
     <div class="sidebar-identity">
       <div class="sidebar-top-row">
         <div class="avatar-wrap">
-          <div class="avatar-monogram" aria-hidden="true">JM</div>
+          <img class="avatar-photo" src="assets/retrato.jpg" alt="Retrato de Jacob Marin Cataño" width="88" height="88" decoding="async">
           <span class="status-dot" title="Disponible para trabajo remoto" aria-hidden="true"></span>
         </div>
         <div class="sidebar-role-wrap">
